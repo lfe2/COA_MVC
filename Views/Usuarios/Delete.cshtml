@@ -1,0 +1,50 @@
+﻿@model CoaMVC.Models.Usuario
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+<a asp-action="Index" class="btn btn-secondary float-right">Volver</a>
+
+<h4>Eliminando Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <dl class="row">
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+            <dd class="col-sm-7">
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form asp-action="Delete">
+            <hr />
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Eliminar" class="btn btn-danger float-right" />
+        </form>
+    </div>
+</div>
